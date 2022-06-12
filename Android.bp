@@ -158,6 +158,28 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libGLES_android.universal7420",
+    stem: "libGLES_android",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/egl/libGLES_android.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/egl/libGLES_android.so"],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "egl",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libExynosHWCService",
     owner: "samsung",
     strip: {

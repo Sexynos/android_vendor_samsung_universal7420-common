@@ -50,6 +50,13 @@ PRODUCT_PACKAGES += \
     libMcClient \
     libMcRegistry
 
+# OpenGLES
+PRODUCT_PACKAGES += \
+    libGLES_android.universal7420
+
+PRODUCT_COPY_FILES += \
+    vendor/samsung/universal7420-common/proprietary/lib/egl/egl.cfg:$(TARGET_COPY_OUT_SYSTEM)/lib/egl/egl.cfg
+
 # Sensors
 PRODUCT_PACKAGES += \
     libsynaFpSensorTestNwd \

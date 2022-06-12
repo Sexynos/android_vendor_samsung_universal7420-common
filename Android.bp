@@ -38,6 +38,126 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libegis_fp_normal_sensor_test",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libegis_fp_normal_sensor_test.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libegis_fp_normal_sensor_test.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsynaFpSensorTestNwd",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libsynaFpSensorTestNwd.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libsynaFpSensorTestNwd.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libauthserver",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libauthserver.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libauthserver.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbauthtzcommon",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libbauthtzcommon.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libbauthtzcommon.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMcRegistry",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libMcRegistry.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libMcRegistry.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMcClient",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libMcClient.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libMcClient.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libExynosHWCService",
     owner: "samsung",
     strip: {
@@ -82,6 +202,18 @@ cc_prebuilt_binary {
     stem: "lpm",
     owner: "samsung",
     srcs: ["proprietary/bin/lpm"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "mcDriverDaemon",
+    owner: "samsung",
+    srcs: ["proprietary/vendor/bin/mcDriverDaemon"],
     check_elf_files: false,
     strip: {
         none: true,

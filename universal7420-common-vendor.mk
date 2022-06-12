@@ -18,6 +18,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/universal7420-common
 
+# aptX
+PRODUCT_PACKAGES += \
+    libaptX_encoder.universal7420
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.vendor.exynos5

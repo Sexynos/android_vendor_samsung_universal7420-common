@@ -20,6 +20,24 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libaptX_encoder.universal7420",
+    stem: "libaptX_encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/product/lib64/libaptX_encoder.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libExynosHWCService",
     owner: "samsung",
     strip: {

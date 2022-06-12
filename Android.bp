@@ -19,3 +19,15 @@
 soong_namespace {
 }
 
+cc_prebuilt_binary {
+    name: "lpm.universal7420",
+    stem: "lpm",
+    owner: "samsung",
+    srcs: ["proprietary/bin/lpm"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}

@@ -18,6 +18,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/universal7420-common
 
+# LPM
+PRODUCT_PACKAGES += \
+    lpm.universal7420
+
 PRODUCT_COPY_FILES += \
     vendor/samsung/universal7420-common/proprietary/vendor/app/FFFFFFFF000000000000000000000001.drbin:$(TARGET_COPY_OUT_VENDOR)/app/FFFFFFFF000000000000000000000001.drbin \
     vendor/samsung/universal7420-common/proprietary/vendor/app/mcRegistry/00060308060501020000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/00060308060501020000000000000000.tlbin \

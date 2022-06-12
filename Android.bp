@@ -19,6 +19,46 @@
 soong_namespace {
 }
 
+cc_prebuilt_library_shared {
+    name: "libExynosHWCService",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libExynosHWCService.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libExynosHWCService.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGrallocWrapper",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libGrallocWrapper.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libGrallocWrapper.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "lpm.universal7420",
     stem: "lpm",
@@ -28,6 +68,69 @@ cc_prebuilt_binary {
     strip: {
         none: true,
     },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gralloc.exynos5",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/hw/gralloc.exynos5.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/gralloc.exynos5.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "hwcomposer.exynos5",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/hw/hwcomposer.exynos5.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/hwcomposer.exynos5.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.vendor.exynos5",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/hw/camera.vendor.exynos5.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/camera.vendor.exynos5.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
 }

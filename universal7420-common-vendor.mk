@@ -18,6 +18,20 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/universal7420-common
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.vendor.exynos5
+
+# HWComposer
+PRODUCT_PACKAGES += \
+    hwcomposer.exynos5 \
+    libExynosHWCService
+
+# Gralloc
+PRODUCT_PACKAGES += \
+    gralloc.exynos5 \
+    libGrallocWrapper
+
 # LPM
 PRODUCT_PACKAGES += \
     lpm.universal7420

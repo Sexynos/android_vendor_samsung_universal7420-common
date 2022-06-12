@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lpm.universal7420
 
+# Widevine
+PRODUCT_COPY_FILES += \
+    vendor/samsung/universal7420-common/proprietary/bin/move_widevine_data.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/move_widevine_data.sh
+
 PRODUCT_COPY_FILES += \
     vendor/samsung/universal7420-common/proprietary/vendor/app/FFFFFFFF000000000000000000000001.drbin:$(TARGET_COPY_OUT_VENDOR)/app/FFFFFFFF000000000000000000000001.drbin \
     vendor/samsung/universal7420-common/proprietary/vendor/app/mcRegistry/00060308060501020000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/00060308060501020000000000000000.tlbin \
